@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const Hero = () => {
@@ -132,13 +133,19 @@ const Hero = () => {
                 }}
               />
 
-              {/* Profile placeholder - you can replace this with an actual image */}
+              {/* Profile Image */}
               <motion.div
-                className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-gradient-to-br from-light-navy to-dark-navy border-2 border-green flex items-center justify-center text-6xl font-bold text-green"
+                className="w-72 h-72 lg:w-88 lg:h-88 rounded-full border-2 border-green relative overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                BP
+                <Image
+                  src="/images/hero-porfile.png"
+                  alt="Blake Pfaff"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </motion.div>
             </div>
           </motion.div>

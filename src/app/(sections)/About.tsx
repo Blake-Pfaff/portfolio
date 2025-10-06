@@ -130,14 +130,19 @@ const About = () => {
                 }}
               />
 
-              {/* Profile image placeholder */}
+              {/* Profile image */}
               <motion.div
-                className="w-60 h-60 lg:w-72 lg:h-72 rounded-lg bg-gradient-to-br from-light-navy to-dark-navy border border-green flex items-center justify-center text-4xl font-bold text-green relative overflow-hidden"
+                className="w-60 h-60 lg:w-72 lg:h-72 rounded-lg border border-green relative overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-green/5 to-transparent" />
-                <span className="relative z-10">BP</span>
+                <Image
+                  src="/images/profile.png"
+                  alt="Blake Pfaff"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </motion.div>
             </div>
           </motion.div>

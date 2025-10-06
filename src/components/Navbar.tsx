@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const Navbar = () => {
@@ -62,19 +63,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Social Links */}
           <motion.div className="flex-shrink-0 flex items-center space-x-6">
-            <motion.button
-              onClick={() => scrollToSection("hero")}
-              className="text-green font-mono text-lg font-bold hover:text-green-bright transition-colors cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              BP
-            </motion.button>
-
             {/* Social Links - Desktop Only */}
-            <div className="hidden md:flex items-center space-x-4 ml-4">
+            <div className="hidden md:flex items-center space-x-4">
               <motion.a
                 href="https://github.com/blakepfaff"
                 target="_blank"
@@ -99,12 +91,20 @@ const Navbar = () => {
               </motion.a>
               <motion.a
                 href="mailto:blake.a.pfaff2@gmail.com"
-                className="text-slate hover:text-green transition-colors cursor-pointer"
+                className="cursor-pointer relative"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
                 aria-label="Email"
               >
-                <FiMail className="h-5 w-5" />
+                <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-green hover:border-green-bright transition-colors">
+                  <Image
+                    src="/images/profile.png"
+                    alt="Blake Pfaff"
+                    width={32}
+                    height={32}
+                    className="object-cover"
+                  />
+                </div>
               </motion.a>
             </div>
           </motion.div>
@@ -231,11 +231,19 @@ const Navbar = () => {
             </motion.a>
             <motion.a
               href="mailto:blake.a.pfaff2@gmail.com"
-              className="text-slate hover:text-green transition-colors cursor-pointer"
+              className="cursor-pointer"
               whileTap={{ scale: 0.9 }}
               aria-label="Email"
             >
-              <FiMail className="h-6 w-6" />
+              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-green">
+                <Image
+                  src="/images/profile.png"
+                  alt="Blake Pfaff"
+                  width={32}
+                  height={32}
+                  className="object-cover"
+                />
+              </div>
             </motion.a>
           </div>
 
