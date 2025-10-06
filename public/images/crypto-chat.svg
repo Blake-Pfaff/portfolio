@@ -1,0 +1,40 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#112240;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#grad1)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#64ffda" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  
+  <!-- Bitcoin icon -->
+  <circle cx="200" cy="150" r="50" fill="none" stroke="#64ffda" stroke-width="3"/>
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="48" fill="#64ffda" text-anchor="middle" font-weight="bold">₿</text>
+  
+  <!-- Chart lines -->
+  <polyline points="300,250 350,200 400,220 450,180 500,190 550,150 600,170" 
+            fill="none" stroke="#64ffda" stroke-width="3" opacity="0.8"/>
+  
+  <!-- Chat bubble -->
+  <rect x="350" y="100" width="300" height="80" rx="10" fill="#172a45" stroke="#64ffda" stroke-width="2"/>
+  <text x="500" y="135" font-family="Arial, sans-serif" font-size="16" fill="#64ffda" text-anchor="middle">
+    Crypto Dashboard
+  </text>
+  <text x="500" y="160" font-family="Arial, sans-serif" font-size="14" fill="#8892b0" text-anchor="middle">
+    with AI Chatbot
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="300" r="5" fill="#64ffda" opacity="0.6"/>
+  <circle cx="700" cy="80" r="7" fill="#64ffda" opacity="0.4"/>
+  <circle cx="650" cy="320" r="6" fill="#64ffda" opacity="0.5"/>
+</svg>
+

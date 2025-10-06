@@ -23,65 +23,83 @@ export interface Education {
 
 export const experiences: Experience[] = [
   {
-    id: "senior-frontend-engineer",
-    company: "TechCorp Inc.",
-    position: "Senior Frontend Engineer",
-    startDate: "2022-01",
+    id: "agilant-solutions",
+    company: "Agilant Solutions",
+    position: "Sr React Developer",
+    startDate: "Dec. 2022",
     endDate: null,
-    description: "Lead frontend development for critical customer-facing applications, focusing on performance optimization and user experience improvements.",
+    description:
+      "Work with React and TypeScript to create multiple applications that help keep track of client inventory needs.",
     achievements: [
-      "Improved application performance by 40% through code splitting and lazy loading",
-      "Led a team of 4 developers in migrating legacy codebase to modern React architecture",
-      "Implemented comprehensive testing strategy resulting in 90% test coverage",
-      "Mentored junior developers and conducted code reviews for 15+ team members"
+      "Architect and high-level planning of data movement in applications",
+      "Created reusable and flexible UI components",
+      "Mentored developers, enforcing coding standards",
+      "Ensure coding standards are in place and followed",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL", "Jest", "Cypress"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "jQuery",
+      "Express",
+      "UI Components",
+    ],
     current: true,
   },
   {
-    id: "fullstack-developer",
-    company: "StartupXYZ",
+    id: "platypus-technologies",
+    company: "Platypus Technologies",
+    position: "Application Developer",
+    startDate: "Oct. 2021",
+    endDate: "Oct. 2022",
+    description:
+      "Worked with React and React Native to create and maintain web and mobile applications for various clients.",
+    achievements: [
+      "Performed work in TypeScript while working with React and React Native",
+      "Worked with React Admin to create an interactive dashboard",
+      "Developed unit and end-to-end tests to ensure code reliability",
+      "Performed back-end tasks in Nest.js and Laravel",
+    ],
+    technologies: [
+      "React",
+      "React Native",
+      "TypeScript",
+      "React Admin",
+      "Nest.js",
+      "Laravel",
+    ],
+  },
+  {
+    id: "daprile-properties",
+    company: "D'aprile Properties",
     position: "Full Stack Developer",
-    startDate: "2020-06",
-    endDate: "2021-12",
-    description: "Developed and maintained multiple web applications using modern JavaScript frameworks and cloud technologies.",
+    startDate: "Nov. 2020",
+    endDate: "Sept. 2021",
+    description:
+      "Worked with Laravel 8 as a full-stack developer and created a custom CMS for real estate sites. Maintained and developed features for an application using Tailwind, Vue.js, and Laravel that helps real estate agents track performance.",
     achievements: [
-      "Built responsive web applications serving 10,000+ daily active users",
-      "Integrated third-party APIs and payment systems (Stripe, PayPal)",
-      "Optimized database queries reducing response time by 60%",
-      "Collaborated with design team to implement pixel-perfect UI components"
+      "Created a custom CMS for real estate sites using Laravel 8",
+      "Maintained and developed features for real estate agent performance tracking application",
+      "Utilized Tailwind CSS for modern, responsive designs",
+      "Integrated Vue.js with Laravel for interactive user interfaces",
     ],
-    technologies: ["React", "Node.js", "Express", "PostgreSQL", "AWS", "Docker"],
+    technologies: ["Laravel", "Vue.js", "Tailwind CSS", "PHP", "JavaScript"],
   },
   {
-    id: "frontend-developer",
-    company: "Digital Agency Pro",
-    position: "Frontend Developer",
-    startDate: "2019-03",
-    endDate: "2020-05",
-    description: "Specialized in creating responsive websites and web applications for various clients across different industries.",
+    id: "dealer-inspire",
+    company: "Dealer Inspire",
+    position: "Front-end Web Developer",
+    startDate: "June 2018",
+    endDate: "Apr. 2020",
+    description:
+      "Front-end WordPress Web Developer creating and maintaining websites for automotive dealerships.",
     achievements: [
-      "Developed 20+ client websites using modern web technologies",
-      "Implemented SEO best practices improving client search rankings",
-      "Created reusable component library reducing development time by 30%",
-      "Worked directly with clients to gather requirements and provide technical solutions"
+      "Created front-end websites for automotive dealerships using HTML, SCSS, and jQuery",
+      "Maintained front-end websites for automotive dealerships",
+      "Worked closely with project managers to make sure goals are hit for websites in a timely manner",
+      "Delivered consistent, high-quality work across multiple client projects",
     ],
-    technologies: ["JavaScript", "React", "Vue.js", "Sass", "WordPress", "Shopify"],
-  },
-  {
-    id: "junior-developer",
-    company: "WebSolutions Ltd.",
-    position: "Junior Web Developer",
-    startDate: "2018-08",
-    endDate: "2019-02",
-    description: "Started career in web development, focusing on frontend technologies and responsive design principles.",
-    achievements: [
-      "Built first professional website from concept to deployment",
-      "Learned modern JavaScript frameworks and best practices",
-      "Participated in agile development processes and daily standups",
-      "Contributed to open source projects and coding communities"
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "PHP"],
+    technologies: ["HTML", "SCSS", "jQuery", "WordPress", "JavaScript"],
   },
 ];
 
@@ -94,6 +112,10 @@ export const education: Education[] = [
     startDate: "2014-09",
     endDate: "2018-05",
     gpa: "3.8",
-    honors: ["Dean's List", "Magna Cum Laude", "Computer Science Honor Society"],
+    honors: [
+      "Dean's List",
+      "Magna Cum Laude",
+      "Computer Science Honor Society",
+    ],
   },
 ];

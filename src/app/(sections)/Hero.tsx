@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const Hero = () => {
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
+    const aboutSection = document.getElementById("about");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -33,24 +33,6 @@ const Hero = () => {
       },
     },
   };
-
-  const socialLinks = [
-    {
-      name: 'GitHub',
-      href: 'https://github.com/blakepfaff',
-      icon: FiGithub,
-    },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/blakepfaff',
-      icon: FiLinkedin,
-    },
-    {
-      name: 'Email',
-      href: 'mailto:blake.a.pfaff2@gmail.com',
-      icon: FiMail,
-    },
-  ];
 
   return (
     <section
@@ -91,8 +73,10 @@ const Hero = () => {
               variants={itemVariants}
               className="text-slate max-w-lg mx-auto lg:mx-0 text-lg md:text-xl leading-relaxed mb-12"
             >
-              I'm a passionate frontend engineer specializing in React, Next.js, and modern web technologies.
-              I love creating beautiful, functional, and accessible web applications that deliver exceptional user experiences.
+              I'm a passionate frontend engineer specializing in React, Next.js,
+              and modern web technologies. I love creating beautiful,
+              functional, and accessible web applications that deliver
+              exceptional user experiences.
             </motion.p>
 
             <motion.div
@@ -103,12 +87,12 @@ const Hero = () => {
                 href="#projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  const projectsSection = document.getElementById('projects');
+                  const projectsSection = document.getElementById("projects");
                   if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                    projectsSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="px-8 py-4 bg-transparent border-2 border-green text-green hover:bg-green hover:text-dark-navy transition-all duration-300 font-medium text-sm"
+                className="px-8 py-4 bg-transparent border-2 border-green text-green hover:bg-green hover:text-dark-navy transition-all duration-300 font-medium text-sm cursor-pointer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -117,9 +101,8 @@ const Hero = () => {
 
               <motion.a
                 href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-green text-dark-navy hover:bg-green-bright transition-all duration-300 font-medium text-sm"
+                download="Blake_Pfaff_Resume.pdf"
+                className="px-8 py-4 bg-green text-dark-navy hover:bg-green-bright transition-all duration-300 font-medium text-sm cursor-pointer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -161,35 +144,6 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="absolute left-8 top-1/2 transform -translate-y-1/2 hidden lg:block"
-        >
-          <div className="flex flex-col space-y-6">
-            {socialLinks.map((social, index) => {
-              const Icon = social.icon;
-              return (
-                <motion.a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate hover:text-green transition-colors duration-300"
-                  whileHover={{ x: 5 }}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.4 + index * 0.1 }}
-                >
-                  <Icon className="h-5 w-5" />
-                </motion.a>
-              );
-            })}
-          </div>
-        </motion.div>
-
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -199,7 +153,7 @@ const Hero = () => {
         >
           <motion.button
             onClick={scrollToAbout}
-            className="text-slate hover:text-green transition-colors duration-300 flex flex-col items-center space-y-2"
+            className="text-slate hover:text-green transition-colors duration-300 flex flex-col items-center space-y-2 cursor-pointer"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >

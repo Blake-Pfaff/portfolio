@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
@@ -58,16 +58,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <p className="text-slate text-sm leading-relaxed">
-                Built with Next.js, TypeScript, and Tailwind CSS. Inspired by{" "}
-                <a
-                  href="https://brittanychiang.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green hover:text-green-bright transition-colors"
-                >
-                  Brittany Chiang
-                </a>
-                's amazing portfolio design.
+                Built with Next.js, TypeScript, and Tailwind CSS.
               </p>
             </motion.div>
           </div>

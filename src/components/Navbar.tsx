@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState("hero");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: "hero", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "experience", label: "Experience" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
   ];
 
   useEffect(() => {
@@ -22,8 +23,8 @@ const Navbar = () => {
       setScrolled(scrollPosition > 50);
 
       // Update active section based on scroll position
-      const sections = navItems.map(item => item.id);
-      const currentSection = sections.find(section => {
+      const sections = navItems.map((item) => item.id);
+      const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -37,14 +38,14 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
@@ -55,24 +56,57 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-dark-navy/80 backdrop-blur-md border-b border-lightest-navy'
-          : 'bg-transparent'
+          ? "bg-dark-navy/80 backdrop-blur-md border-b border-lightest-navy"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <motion.div
-            className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="text-green font-mono text-lg font-bold hover:text-green-bright transition-colors"
+          <motion.div className="flex-shrink-0 flex items-center space-x-6">
+            <motion.button
+              onClick={() => scrollToSection("hero")}
+              className="text-green font-mono text-lg font-bold hover:text-green-bright transition-colors cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               BP
-            </button>
+            </motion.button>
+
+            {/* Social Links - Desktop Only */}
+            <div className="hidden md:flex items-center space-x-4 ml-4">
+              <motion.a
+                href="https://github.com/blakepfaff"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate hover:text-green transition-colors cursor-pointer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="GitHub"
+              >
+                <FiGithub className="h-5 w-5" />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/blakepfaff"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate hover:text-green transition-colors cursor-pointer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin className="h-5 w-5" />
+              </motion.a>
+              <motion.a
+                href="mailto:blake.a.pfaff2@gmail.com"
+                className="text-slate hover:text-green transition-colors cursor-pointer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="Email"
+              >
+                <FiMail className="h-5 w-5" />
+              </motion.a>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -82,10 +116,10 @@ const Navbar = () => {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors relative ${
+                  className={`px-3 py-2 text-sm font-medium transition-colors relative cursor-pointer ${
                     activeSection === item.id
-                      ? 'text-green'
-                      : 'text-slate hover:text-lightest-slate'
+                      ? "text-green"
+                      : "text-slate hover:text-lightest-slate"
                   }`}
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
@@ -99,6 +133,17 @@ const Navbar = () => {
                   )}
                 </motion.button>
               ))}
+
+              {/* Resume Download Button */}
+              <motion.a
+                href="/resume.pdf"
+                download="Blake_Pfaff_Resume.pdf"
+                className="px-4 py-2 text-sm font-medium border border-green text-green hover:bg-green hover:text-dark-navy transition-all duration-300 rounded cursor-pointer"
+                whileHover={{ y: -2, scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Resume
+              </motion.a>
             </div>
           </div>
 
@@ -106,7 +151,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-slate hover:text-green transition-colors"
+              className="text-slate hover:text-green transition-colors cursor-pointer"
               whileTap={{ scale: 0.95 }}
             >
               <svg
@@ -140,7 +185,7 @@ const Navbar = () => {
       <motion.div
         initial={false}
         animate={{
-          height: isMenuOpen ? 'auto' : 0,
+          height: isMenuOpen ? "auto" : 0,
           opacity: isMenuOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
@@ -151,16 +196,59 @@ const Navbar = () => {
             <motion.button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors ${
+              className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors cursor-pointer ${
                 activeSection === item.id
-                  ? 'text-green bg-lightest-navy'
-                  : 'text-slate hover:text-lightest-slate hover:bg-lightest-navy'
+                  ? "text-green bg-lightest-navy"
+                  : "text-slate hover:text-lightest-slate hover:bg-lightest-navy"
               }`}
               whileTap={{ scale: 0.95 }}
             >
               {item.label}
             </motion.button>
           ))}
+
+          {/* Social Links - Mobile */}
+          <div className="flex justify-center space-x-6 py-4 border-t border-lightest-navy/30">
+            <motion.a
+              href="https://github.com/blakepfaff"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate hover:text-green transition-colors cursor-pointer"
+              whileTap={{ scale: 0.9 }}
+              aria-label="GitHub"
+            >
+              <FiGithub className="h-6 w-6" />
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/blakepfaff"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate hover:text-green transition-colors cursor-pointer"
+              whileTap={{ scale: 0.9 }}
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin className="h-6 w-6" />
+            </motion.a>
+            <motion.a
+              href="mailto:blake.a.pfaff2@gmail.com"
+              className="text-slate hover:text-green transition-colors cursor-pointer"
+              whileTap={{ scale: 0.9 }}
+              aria-label="Email"
+            >
+              <FiMail className="h-6 w-6" />
+            </motion.a>
+          </div>
+
+          {/* Resume Download Button */}
+          <motion.a
+            href="/resume.pdf"
+            download="Blake_Pfaff_Resume.pdf"
+            className="block px-3 py-2 text-base font-medium w-full text-center border border-green text-green hover:bg-green hover:text-dark-navy transition-all duration-300 rounded cursor-pointer"
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Download Resume
+          </motion.a>
         </div>
       </motion.div>
     </motion.nav>

@@ -1,22 +1,21 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   const skills = [
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Node.js',
-    'Python',
-    'HTML & CSS',
-    'Tailwind CSS',
-    'Framer Motion',
-    'Git & GitHub',
-    'REST APIs',
-    'GraphQL',
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Express",
+    "HTML & CSS",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Git & GitHub",
+    "REST APIs",
   ];
 
   const containerVariants = {
@@ -67,25 +66,45 @@ const About = () => {
             viewport={{ once: true }}
             className="lg:col-span-2 space-y-6"
           >
-            <motion.p variants={itemVariants} className="text-slate text-lg leading-relaxed">
-              Hello! I'm Blake, a passionate frontend engineer who loves creating exceptional digital experiences.
-              My journey in web development began during college when I discovered the power of turning ideas into interactive realities.
+            <motion.p
+              variants={itemVariants}
+              className="text-slate text-lg leading-relaxed"
+            >
+              Hello! I'm Blake, a passionate frontend engineer who loves
+              creating exceptional digital experiences. My journey in web
+              development began during college when I discovered the power of
+              turning ideas into interactive realities.
             </motion.p>
 
-            <motion.p variants={itemVariants} className="text-slate text-lg leading-relaxed">
-              Over the years, I've had the privilege of working with startups and established companies, building everything from
-              simple landing pages to complex web applications. I specialize in React and Next.js, but I'm always excited to
-              learn new technologies and tackle challenging problems.
+            <motion.p
+              variants={itemVariants}
+              className="text-slate text-lg leading-relaxed"
+            >
+              Over the years, I've had the privilege of working with startups
+              and established companies, building everything from simple landing
+              pages to complex web applications. I specialize in React and
+              Next.js, but I'm always excited to learn new technologies and
+              tackle challenging problems.
             </motion.p>
 
-            <motion.p variants={itemVariants} className="text-slate text-lg leading-relaxed">
-              When I'm not coding, you can find me exploring new hiking trails, experimenting with photography, or diving deep
-              into a good sci-fi novel. I believe that diverse experiences fuel creativity and make me a better developer.
+            <motion.p
+              variants={itemVariants}
+              className="text-slate text-lg leading-relaxed"
+            >
+              When I'm not coding, you can find me exploring new hiking trails,
+              experimenting with photography, or diving deep into a good sci-fi
+              novel. I believe that diverse experiences fuel creativity and make
+              me a better developer.
             </motion.p>
 
-            <motion.p variants={itemVariants} className="text-slate text-lg leading-relaxed">
-              I'm currently looking for new opportunities where I can contribute my skills while continuing to grow as a developer.
-              I'm particularly interested in companies that value clean code, user experience, and continuous learning.
+            <motion.p
+              variants={itemVariants}
+              className="text-slate text-lg leading-relaxed"
+            >
+              I'm currently looking for new opportunities where I can contribute
+              my skills while continuing to grow as a developer. I'm
+              particularly interested in companies that value clean code, user
+              experience, and continuous learning.
             </motion.p>
           </motion.div>
 
