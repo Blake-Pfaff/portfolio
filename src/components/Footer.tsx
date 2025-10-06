@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 
