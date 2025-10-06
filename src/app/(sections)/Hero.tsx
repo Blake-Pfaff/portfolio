@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiArrowDown } from "react-icons/fi";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -30,7 +30,7 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, 0.05, 0.01, 0.99],
+        ease: [0.6, 0.05, 0.01, 0.99] as const,
       },
     },
   };
@@ -74,8 +74,8 @@ const Hero = () => {
               variants={itemVariants}
               className="text-slate max-w-lg mx-auto lg:mx-0 text-lg md:text-xl leading-relaxed mb-12"
             >
-              I'm a passionate frontend engineer specializing in React, Next.js,
-              and modern web technologies. I love creating beautiful,
+              I&apos;m a passionate frontend engineer specializing in React,
+              Next.js, and modern web technologies. I love creating beautiful,
               functional, and accessible web applications that deliver
               exceptional user experiences.
             </motion.p>

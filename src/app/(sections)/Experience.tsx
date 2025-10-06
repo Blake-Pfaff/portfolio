@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FiExternalLink, FiMapPin, FiCalendar } from 'react-icons/fi';
-import { experiences } from '@/data/experience';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FiExternalLink, FiCalendar } from "react-icons/fi";
+import { experiences } from "@/data/experience";
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(experiences[0]?.id || '');
+  const [activeTab, setActiveTab] = useState(experiences[0]?.id || "");
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -26,15 +26,19 @@ const Experience = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.6, 0.05, 0.01, 0.99],
+        ease: [0.6, 0.05, 0.01, 0.99] as const,
       },
     },
   };
 
-  const activeExperience = experiences.find(exp => exp.id === activeTab) || experiences[0];
+  const activeExperience =
+    experiences.find((exp) => exp.id === activeTab) || experiences[0];
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+    <section
+      id="experience"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -45,7 +49,7 @@ const Experience = () => {
           className="mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-lightest-slate mb-4">
-            Where I've Worked
+            Where I&apos;ve Worked
           </h2>
           <div className="w-20 h-1 bg-green mb-8" />
         </motion.div>
@@ -66,15 +70,13 @@ const Experience = () => {
                   onClick={() => setActiveTab(experience.id)}
                   className={`w-full text-left p-4 rounded-lg border-l-2 transition-all duration-300 ${
                     activeTab === experience.id
-                      ? 'border-green bg-green/10 text-green'
-                      : 'border-lightest-navy text-slate hover:text-lightest-slate hover:bg-lightest-navy/50'
+                      ? "border-green bg-green/10 text-green"
+                      : "border-lightest-navy text-slate hover:text-lightest-slate hover:bg-lightest-navy/50"
                   }`}
                   whileHover={{ x: 4 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="font-medium">
-                    {experience.company}
-                  </div>
+                  <div className="font-medium">{experience.company}</div>
                 </motion.button>
               ))}
             </div>
@@ -113,7 +115,8 @@ const Experience = () => {
                   <div className="flex items-center space-x-2">
                     <FiCalendar className="h-4 w-4" />
                     <span className="text-sm font-mono">
-                      {activeExperience.startDate} - {activeExperience.endDate || 'Present'}
+                      {activeExperience.startDate} -{" "}
+                      {activeExperience.endDate || "Present"}
                     </span>
                   </div>
                   {activeExperience.current && (
@@ -132,7 +135,9 @@ const Experience = () => {
 
                 {/* Achievements */}
                 <motion.div variants={itemVariants} className="mb-8">
-                  <h4 className="text-lightest-slate font-semibold mb-4">Key Achievements:</h4>
+                  <h4 className="text-lightest-slate font-semibold mb-4">
+                    Key Achievements:
+                  </h4>
                   <ul className="space-y-2">
                     {activeExperience.achievements.map((achievement, index) => (
                       <motion.li
@@ -143,7 +148,9 @@ const Experience = () => {
                         className="flex items-start space-x-3 text-slate"
                       >
                         <div className="w-1.5 h-1.5 bg-green rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-sm leading-relaxed">{achievement}</span>
+                        <span className="text-sm leading-relaxed">
+                          {achievement}
+                        </span>
                       </motion.li>
                     ))}
                   </ul>
@@ -151,7 +158,9 @@ const Experience = () => {
 
                 {/* Technologies */}
                 <motion.div variants={itemVariants}>
-                  <h4 className="text-lightest-slate font-semibold mb-4">Technologies Used:</h4>
+                  <h4 className="text-lightest-slate font-semibold mb-4">
+                    Technologies Used:
+                  </h4>
                   <div className="flex flex-wrap gap-2">
                     {activeExperience.technologies.map((tech) => (
                       <motion.span

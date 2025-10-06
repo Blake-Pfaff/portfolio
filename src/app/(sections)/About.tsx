@@ -36,7 +36,7 @@ const About = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.6, 0.05, 0.01, 0.99],
+        ease: [0.6, 0.05, 0.01, 0.99] as const,
       },
     },
   };
@@ -70,7 +70,7 @@ const About = () => {
               variants={itemVariants}
               className="text-slate text-lg leading-relaxed"
             >
-              Hello! I'm Blake, a passionate frontend engineer who loves
+              Hello! I&apos;m Blake, a passionate frontend engineer who loves
               creating exceptional digital experiences. My journey in web
               development began during college when I discovered the power of
               turning ideas into interactive realities.
@@ -80,31 +80,31 @@ const About = () => {
               variants={itemVariants}
               className="text-slate text-lg leading-relaxed"
             >
-              Over the years, I've had the privilege of working with startups
-              and established companies, building everything from simple landing
-              pages to complex web applications. I specialize in React and
-              Next.js, but I'm always excited to learn new technologies and
-              tackle challenging problems.
+              Over the years, I&apos;ve had the privilege of working with
+              startups and established companies, building everything from
+              simple landing pages to complex web applications. I specialize in
+              React and Next.js, but I&apos;m always excited to learn new
+              technologies and tackle challenging problems.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-slate text-lg leading-relaxed"
             >
-              When I'm not coding, you can find me exploring new hiking trails,
-              experimenting with photography, or diving deep into a good sci-fi
-              novel. I believe that diverse experiences fuel creativity and make
-              me a better developer.
+              When I&apos;m not coding, you can find me exploring new hiking
+              trails, experimenting with photography, or diving deep into a good
+              sci-fi novel. I believe that diverse experiences fuel creativity
+              and make me a better developer.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-slate text-lg leading-relaxed"
             >
-              I'm currently looking for new opportunities where I can contribute
-              my skills while continuing to grow as a developer. I'm
-              particularly interested in companies that value clean code, user
-              experience, and continuous learning.
+              I&apos;m currently looking for new opportunities where I can
+              contribute my skills while continuing to grow as a developer.
+              I&apos;m particularly interested in companies that value clean
+              code, user experience, and continuous learning.
             </motion.p>
           </motion.div>
 
@@ -167,7 +167,7 @@ const About = () => {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-3"
           >
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <motion.div
                 key={skill}
                 variants={itemVariants}

@@ -1,38 +1,49 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FiMail,
+  FiMapPin,
+  FiSend,
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+} from "react-icons/fi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       // Here you would typically send the form data to your backend
       // For now, we'll just simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setSubmitStatus('error');
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch {
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -56,30 +67,30 @@ const Contact = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.6, 0.05, 0.01, 0.99],
+        ease: [0.6, 0.05, 0.01, 0.99] as const,
       },
     },
   };
 
   const socialLinks = [
     {
-      name: 'GitHub',
-      href: 'https://github.com/blakepfaff',
+      name: "GitHub",
+      href: "https://github.com/blakepfaff",
       icon: FiGithub,
     },
     {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/blakepfaff',
+      name: "LinkedIn",
+      href: "https://linkedin.com/in/blakepfaff",
       icon: FiLinkedin,
     },
     {
-      name: 'Email',
-      href: 'mailto:blake.a.pfaff2@gmail.com',
+      name: "Email",
+      href: "mailto:blake.a.pfaff2@gmail.com",
       icon: FiMail,
     },
     {
-      name: 'Twitter',
-      href: 'https://twitter.com/blakepfaff',
+      name: "Twitter",
+      href: "https://twitter.com/blakepfaff",
       icon: FiTwitter,
     },
   ];
@@ -100,8 +111,9 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-green mb-8 mx-auto" />
           <p className="text-slate text-lg max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
-            Feel free to reach out if you'd like to work together!
+            I&apos;m always open to discussing new opportunities, interesting
+            projects, or just having a chat about technology. Feel free to reach
+            out if you&apos;d like to work together!
           </p>
         </motion.div>
 
@@ -115,11 +127,12 @@ const Contact = () => {
           >
             <motion.div variants={itemVariants} className="mb-8">
               <h3 className="text-2xl font-bold text-lightest-slate mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-slate text-lg leading-relaxed mb-8">
-                I'm currently available for freelance work and full-time opportunities.
-                Whether you have a project in mind or just want to say hello, I'd love to hear from you.
+                I&apos;m currently available for freelance work and full-time
+                opportunities. Whether you have a project in mind or just want
+                to say hello, I&apos;d love to hear from you.
               </p>
             </motion.div>
 
@@ -152,7 +165,9 @@ const Contact = () => {
 
             {/* Social Links */}
             <motion.div variants={itemVariants} className="mt-12">
-              <p className="text-lightest-slate font-medium mb-6">Find me online</p>
+              <p className="text-lightest-slate font-medium mb-6">
+                Find me online
+              </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -183,7 +198,10 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <motion.div variants={itemVariants}>
-                <label htmlFor="name" className="block text-lightest-slate font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-lightest-slate font-medium mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -199,7 +217,10 @@ const Contact = () => {
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <label htmlFor="email" className="block text-lightest-slate font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-lightest-slate font-medium mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -215,7 +236,10 @@ const Contact = () => {
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <label htmlFor="message" className="block text-lightest-slate font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-lightest-slate font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -252,17 +276,17 @@ const Contact = () => {
               </motion.button>
 
               {/* Status Messages */}
-              {submitStatus === 'success' && (
+              {submitStatus === "success" && (
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="text-green text-sm text-center"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </motion.p>
               )}
 
-              {submitStatus === 'error' && (
+              {submitStatus === "error" && (
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}

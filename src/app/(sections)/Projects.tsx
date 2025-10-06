@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { FiExternalLink, FiGithub, FiFilter } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { projects } from "@/data/projects";
 
 const Projects = () => {
@@ -27,7 +27,7 @@ const Projects = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.6, 0.05, 0.01, 0.99],
+        ease: [0.6, 0.05, 0.01, 0.99] as const,
       },
     },
   };
@@ -49,8 +49,8 @@ const Projects = () => {
           <div className="w-20 h-1 bg-green mb-8" />
           <p className="text-slate text-lg max-w-3xl">
             Here are some of my recent projects. Each one represents a unique
-            challenge and learning experience. I've worked on everything from
-            full-stack applications to responsive web design.
+            challenge and learning experience. I&apos;ve worked on everything
+            from full-stack applications to responsive web design.
           </p>
         </motion.div>
 
@@ -63,7 +63,7 @@ const Projects = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
