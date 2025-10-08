@@ -91,10 +91,11 @@ const About = () => {
               variants={itemVariants}
               className="text-slate text-lg leading-relaxed"
             >
-              When I&apos;m not coding, you can find me exploring new hiking
-              trails, experimenting with photography, or diving deep into a good
-              sci-fi novel. I believe that diverse experiences fuel creativity
-              and make me a better developer.
+              When I’m not building or debugging something, I’m usually
+              exploring new ideas, learning how things work, or finding
+              inspiration in music, design, or psychology. I like diving deep
+              into how people think and what makes great digital experiences
+              feel effortless it’s what keeps me growing as a developer.
             </motion.p>
 
             <motion.p
