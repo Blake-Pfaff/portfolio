@@ -16,6 +16,7 @@ const About = () => {
     "Framer Motion",
     "Git & GitHub",
     "REST APIs",
+    "WordPress",
   ];
 
   const containerVariants = {

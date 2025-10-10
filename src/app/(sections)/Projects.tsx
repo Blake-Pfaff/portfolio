@@ -178,7 +178,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <motion.a
-            href="https://github.com/blakepfaff"
+            href="https://github.com/Blake-Pfaff"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-6 py-3 border border-green text-green hover:bg-green hover:text-dark-navy transition-all duration-300 font-medium"

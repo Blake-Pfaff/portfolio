@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FiMail,
-  FiMapPin,
-  FiSend,
-  FiGithub,
-  FiLinkedin,
-  FiTwitter,
-} from "react-icons/fi";
+import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -75,7 +68,7 @@ const Contact = () => {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "https://github.com/blakepfaff",
+      href: "https://github.com/Blake-Pfaff",
       icon: FiGithub,
     },
     {
@@ -87,11 +80,6 @@ const Contact = () => {
       name: "Email",
       href: "mailto:blake.a.pfaff2@gmail.com",
       icon: FiMail,
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/blakepfaff",
-      icon: FiTwitter,
     },
   ];
 

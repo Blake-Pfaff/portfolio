@@ -43,6 +43,7 @@ export const experiences: Experience[] = [
       "jQuery",
       "Express",
       "UI Components",
+      "WordPress",
     ],
     current: true,
   },
