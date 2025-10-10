@@ -68,7 +68,7 @@ const Navbar = () => {
             {/* Social Links - Desktop Only */}
             <div className="hidden md:flex items-center space-x-4">
               <motion.a
-                href="https://github.com/blakepfaff"
+                href="https://github.com/Blake-Pfaff"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate hover:text-green transition-colors cursor-pointer"
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <FiGithub className="h-5 w-5" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/blakepfaff"
+                href="https://www.linkedin.com/in/blake-a-pfaff/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate hover:text-green transition-colors cursor-pointer"
@@ -210,7 +210,7 @@ const Navbar = () => {
           {/* Social Links - Mobile */}
           <div className="flex justify-center space-x-6 py-4 border-t border-lightest-navy/30">
             <motion.a
-              href="https://github.com/blakepfaff"
+              href="https://github.com/Blake-Pfaff"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate hover:text-green transition-colors cursor-pointer"
@@ -220,7 +220,7 @@ const Navbar = () => {
               <FiGithub className="h-6 w-6" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/blakepfaff"
+              href="https://www.linkedin.com/in/blake-a-pfaff/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate hover:text-green transition-colors cursor-pointer"
