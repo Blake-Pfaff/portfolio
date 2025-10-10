@@ -73,7 +73,7 @@ const Contact = () => {
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/blakepfaff",
+      href: "https://www.linkedin.com/in/blake-a-pfaff/",
       icon: FiLinkedin,
     },
     {
