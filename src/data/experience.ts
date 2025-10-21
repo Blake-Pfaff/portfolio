@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     company: "Agilant Solutions",
     position: "Sr React Developer",
     startDate: "Dec. 2022",
-    endDate: null,
+    endDate: "Aug. 2025",
     description:
       "Work with React and TypeScript to create multiple applications that help keep track of client inventory needs.",
     achievements: [
@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
       "UI Components",
       "WordPress",
     ],
-    current: true,
+    current: false,
   },
   {
     id: "platypus-technologies",

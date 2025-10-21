@@ -68,7 +68,7 @@ const Experience = () => {
                 <motion.button
                   key={experience.id}
                   onClick={() => setActiveTab(experience.id)}
-                  className={`w-full text-left p-4 rounded-lg border-l-2 transition-all duration-300 ${
+                  className={`w-full text-left p-4 rounded-lg border-l-2 transition-all duration-300 cursor-pointer ${
                     activeTab === experience.id
                       ? "border-green bg-green/10 text-green"
                       : "border-lightest-navy text-slate hover:text-lightest-slate hover:bg-lightest-navy/50"
