@@ -3,6 +3,7 @@
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -21,6 +22,11 @@
 /* Base styles */
 html {
   scroll-behavior: smooth;
+  /* Force scrollbar to always be visible to prevent layout shift */
+  overflow-y: scroll;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -28,6 +34,9 @@ body {
   color: #ccd6f6;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Dark mode by default */
