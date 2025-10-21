@@ -12,13 +12,25 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Blake Pfaff - Frontend Engineer",
-  description: "Portfolio of Blake Pfaff, a passionate frontend engineer specializing in React, Next.js, and modern web technologies.",
-  keywords: ["Blake Pfaff", "Frontend Engineer", "React", "Next.js", "TypeScript", "Web Development"],
+  description:
+    "Portfolio of Blake Pfaff, a passionate frontend engineer specializing in React, Next.js, and modern web technologies.",
+  keywords: [
+    "Blake Pfaff",
+    "Frontend Engineer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Web Development",
+  ],
   authors: [{ name: "Blake Pfaff" }],
   creator: "Blake Pfaff",
+  icons: {
+    icon: "/images/profile.png",
+  },
   openGraph: {
     title: "Blake Pfaff - Frontend Engineer",
-    description: "Portfolio of Blake Pfaff, a passionate frontend engineer specializing in React, Next.js, and modern web technologies.",
+    description:
+      "Portfolio of Blake Pfaff, a passionate frontend engineer specializing in React, Next.js, and modern web technologies.",
     url: "https://blakepfaff.dev",
     siteName: "Blake Pfaff Portfolio",
     type: "website",
@@ -26,7 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Blake Pfaff - Frontend Engineer",
-    description: "Portfolio of Blake Pfaff, a passionate frontend engineer specializing in React, Next.js, and modern web technologies.",
+    description:
+      "Portfolio of Blake Pfaff, a passionate frontend engineer specializing in React, Next.js, and modern web technologies.",
     creator: "@blakepfaff",
   },
 };
@@ -47,9 +60,7 @@ export default function RootLayout({
         >
           <div className="relative">
             <Navbar />
-            <main className="pt-16">
-              {children}
-            </main>
+            <main className="pt-16">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
