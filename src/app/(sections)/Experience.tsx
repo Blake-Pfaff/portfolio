@@ -97,14 +97,22 @@ const Experience = () => {
                   <h3 className="text-2xl font-bold text-lightest-slate mb-1">
                     {activeExperience.position}
                   </h3>
-                  <motion.a
-                    href="#"
-                    className="text-xl text-green hover:text-green-bright transition-colors inline-flex items-center space-x-2"
-                    whileHover={{ x: 4 }}
-                  >
-                    <span>@{activeExperience.company}</span>
-                    <FiExternalLink className="h-4 w-4" />
-                  </motion.a>
+                  {activeExperience.url ? (
+                    <motion.a
+                      href={activeExperience.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl text-green hover:text-green-bright transition-colors inline-flex items-center space-x-2"
+                      whileHover={{ x: 4 }}
+                    >
+                      <span>@{activeExperience.company}</span>
+                      <FiExternalLink className="h-4 w-4" />
+                    </motion.a>
+                  ) : (
+                    <span className="text-xl text-green">
+                      @{activeExperience.company}
+                    </span>
+                  )}
                 </motion.div>
 
                 {/* Job Duration */}

@@ -1,6 +1,7 @@
 export interface Experience {
   id: string;
   company: string;
+  url?: string;
   position: string;
   startDate: string;
   endDate: string | null;
@@ -23,8 +24,34 @@ export interface Education {
 
 export const experiences: Experience[] = [
   {
-    id: "agilant-solutions",
-    company: "Agilant Solutions",
+    id: "agile-brains",
+    company: "Agile Brains",
+    url: "https://agilebrains.com/",
+    position: "Front End Developer",
+    startDate: "Oct. 2025",
+    endDate: null,
+    description:
+      "Rebuilding a no-code platform's visual workflows as a real React and TypeScript codebase, trading untestable drag-and-drop logic for a component library the team can extend on its own.",
+    achievements: [
+      "Rebuilt a no-code platform's visual workflows as a React and TypeScript component library the team can extend on its own",
+      "Run Claude Code and GitHub Copilot daily to scaffold components, generate tests, and drive large refactors",
+      "Cut app load times by roughly half by reworking state management around the app's REST calls",
+      "Cleared dozens of recurring UI bugs by folding copy-pasted logic into shared components",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "React Query",
+      "Claude Code",
+      "GitHub Copilot",
+      "REST APIs",
+    ],
+    current: true,
+  },
+  {
+    id: "toga-technology",
+    company: "TOGA Technology",
+    url: "https://togatech.com/",
     position: "Sr React Developer",
     startDate: "Dec. 2022",
     endDate: "Aug. 2025",
