@@ -3,7 +3,6 @@ import About from "./(sections)/About";
 import Experience from "./(sections)/Experience";
 import Projects from "./(sections)/Projects";
 import Contact from "./(sections)/Contact";
-import DemoMap from "./(sections)/demoMap";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Experience />
       <Projects />
       <Contact />
-      <DemoMap />
     </>
   );
 }
